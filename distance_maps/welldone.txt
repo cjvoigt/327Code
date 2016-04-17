@@ -1,0 +1,64 @@
+Seed is 2984412310.
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                           #                                                    
+                   . .    ###                                   ##   ##         
+                   . .    #  ##                                                 
+         .         . .    #   ##                                                
+   .  .  .         . .    #    #                                                
+   . ..  .  ....   . .    #    #          #      #####            ##            
+   . .. ..  .  .   . .    #    #   ###    #####  #  ##                 #        
+   @.....   .....  . .     #   #  #  ##   #   #  #  #         #        #        
+   ..  ..   .      . .     # ##   #   #   #   #  # #          ##      ##        
+       .     .  .          ###    #  ##   #   #  ##            #      #         
+              ...                  ###    #   #   #             #     #         
+                                                  ####           ######         
+                                                                   ###          
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                           #                                                    
+                   . .    ###                                   ##   ##         
+                   . .    #  ##                                                 
+         8         . .    #   ##                                                
+   3  4  7         . .    #    #                                                
+   2 33  6  ....   . .    #    #          #      #####            ##            
+   1 23 56  .  .   . .    #    #   ###    #####  #  ##                 #        
+   012345   .....  . .     #   #  #  ##   #   #  #  #         #        #        
+   11  45   .      . .     # ##   #   #   #   #  # #          ##      ##        
+       5     .  .          ###    #  ##   #   #  ##            #      #         
+              ...                  ###    #   #   #             #     #         
+                                                  ####           ######         
+                                                                   ###          
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ pppppppppppqqqrrtvyBCDDDGGILOQQTUXYZ                                           
+ mmmmmmmmmmnnnooqsvyzAAADDFILNNQRUVWZ                                           
+ jjjjjjjjjkkkllnpsvwxxxAACFIKKNORSTWX                                           
+ gggggggghhhiikmpstuuuxxzCFHHKLOPQTUX                                           
+ dddddddeeeffhjmpqrrruuwzCFGHILMNQRUX                                           
+ aaaaaabbbccegjmnopqrttwzCFGHIJKNORUX                           ##   ##         
+ 7777788899bdgjklmnqqstwzCFGHIJKLORUX                                           
+ 6444555788adghijknppstwzCFGJJJKLORUXZZ                                         
+ 5333444777adefghknopstwzCFGJKKKLORUWWXY                                        
+ 4222334667adefghklopstwzCFGJKLLLORTTUVYZ #      #####            ##            
+ 4111234567adefghilopstwzCFGHKMMMORSTUVWZ #####  #  ##                 #        
+ 4101234567adefghilopstwzCFGHKKLMPRSTUVWZ #   #  #  #         #        #        
+ 4111234569adefghilopstwzCFHHJKLMPSSVVVWZ #   #  # #          ##      ##        
+ 4222255569cdefghilopstwzCFIIJKLOPSTUVWWZ #   #  ##            #      #         
+ 5555556689cfffghilorsvwzCFIJJKNORSTUVWXZ #   #   #             #     #         
+ 888888899bcfggghiloruvyzCFILMMNQRUUUVWZ          ####           ######         
+ bbbbbbbbccefijjjkloruxyBCFILOPPQTUXXXYZ                           ###          
+ eeeeeeeeeffhilmmmnoruxABEFILORSSTWX                                            
+ hhhhhhhhhhiiklopppqruxADEHILORUVVWZ                                            
+                                                                                

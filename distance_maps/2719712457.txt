@@ -1,0 +1,64 @@
+Seed is 2736196791.
+                                                                                
+  .............                                                 .....           
+  .............         ....                                    ...@.           
+  .............         ....                                    .....           
+  .............          #                                      .....           
+  .............          #                                    ##.....           
+  .............          #                                   ## .....           
+  .............          #                        .........###     #            
+             #           #                        .........        #            
+             #           #                        .........        #            
+             #           #                        .........        #            
+             #           #                        .........        #....        
+             #           #                        #                 ....        
+            ......#################################                 ....        
+            ......                                                  ....        
+                                                                    ....        
+                                                                    ....        
+                                                                    ....        
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+  .............                                                 32111           
+  .............         QQQQ                                    32101           
+  .............         PPPQ                                    32111           
+  .............          O                                      32222           
+  ........ZZZZZ          N                                    5433333           
+  ........ZYYYY          M                                   65 44444           
+  ........ZYXXX          L                        hgfedcba9876     5            
+             W           K                        hgfedcba9        6            
+             V           J                        hgfedcbaa        7            
+             U           I                        hgfedcbbb        8            
+             T           H                        hgfedcccc        99abc        
+             S           G                        h                 aabc        
+            TSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjii                 bbbc        
+            TSRQPO                                                  cccc        
+                                                                    dddd        
+                                                                    eeee        
+                                                                    ffff        
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+  .........ZZZZYXUUTRRQONNMMMNMLJIGFDDDBzwtsssppponnmjjfffecb764321112456acdffj 
+  .........ZYYYXXUTSRQPONMMLLLLJJIGFDCCBzwtsrpommmmlligfdddca754321012356acdefg 
+  .........ZYXXXVUTSRQPONMLLKJIIHHHFDCAAzwtsqpolllllkigdcbbb8654321112366acdefg 
+  .......ZZZYXWWVUTSSQPONMLJIHHFFFFFCCAyywtrqpoljjjjjhgdcbaa8654322222379abeegg 
+  .......ZYYYXWVVUTRRPPOMMLJHHEEEEEECBzxxwtrqqoljiiiigddcb997654333333589abcfhh 
+  .......ZYXXXWVUUSRQPLLLLLJHFEDDDCCAzyxvvurqpnljihgfedcba98765444444468bbbcehk 
+  .......ZYXWWWVUTSRQPLKKKKJHFEDCCCBAzyxuusrqpnmkihgfedcba9876655555558abccceik 
+         YYXVVVWUSRRQOLKJJJKJFEDBBAAzzywusrpppnnkihgfedcba9877766666679abcdeeik 
+         YXXVUUUTSQPPNLKJIIIHGDCBAAyyyywusrponnnkihgfedcbaaaa8889877799acddehjk 
+         YXVUUTTTRQNNNLJIIHHHGDCBAzxxxzwvsrpommlkihgfedcbbbbbbbba98889aadeeehkl 
+         YVVTTRRRROMLLLJHHHGFEDBBzyxvvvvtsrromllkihgfedccccccddbba999abcdeffhkl 
+       ZYWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedddddddfddbbaaaabcdefhhkm 
+       ZYWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjiiigggfeeegggeeeccbbbbcdefjklm 
+       ZYWWUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjjjjkigfffghihhhfffcccccdeijklm 
+       ZZYXUTSRQPPPPONLKKJIGFCBAzzxxxxttsqqpooonmmmmligggggiijjiihfddddddfijllo 
+        ZYXWUURRRRQQPOLLLJIGECBAAzzyyxxutsspppooonnnliiiiiijjjjjihfeeeeeefikmno 
+         YXWWUUUSRRQQONMLJIGECBBBAAAAzxwtttssrrrqoonlkkjjjjjkkkkihfffffffgikmno 
+         YXXWWWVSSSRRRPNLJIHECCCDDCCAzywvvttttttqppnlllmmmkkklmkihggggggggjkmno 
+          ZZYYWVVUUTTRPNLJIHFFEEEEECAAyyxwvvvwvtqqpnnnnnnmllllmkkkkkhhhijjjkmor 
+                                                                                

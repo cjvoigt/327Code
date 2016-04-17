@@ -1,0 +1,64 @@
+Seed is 2794488329.
+                                                                                
+                                                                                
+                 ............                                                   
+                 ............                                     .....         
+                 ............                                     .....         
+                 ............                                     .....         
+                 ...........@                         ....        .....         
+                     #                                ....      ##.....         
+       ...........   #                                ....      #               
+       ...........####################################....#......               
+       ...........                                   #.... ......               
+                 #                                    ....      #               
+                 #                                    ....      #               
+                ......                                ....   .....              
+                ......                                       .....              
+                ......                                       .....              
+                ......                                                          
+                ......                                                          
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+                 ba9876544444                                                   
+                 ba9876543333                                     UUUUV         
+                 ba9876543222                                     TTTUV         
+                 ba9876543211                                     SSTUV         
+                 ba9876543210                         HHHI        RSTUV         
+                     7                                GGHI      QQRSTUV         
+       mlkjihgfedc   8                                FGHI      P               
+       mlkjihgfedcba999abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP               
+       mlkjihgfedc                                   EFGHI KLMNOP               
+                 d                                    FGHI      P               
+                 e                                    GGHI      Q               
+                fffghi                                HHHI   TSRRR              
+                gggghi                                       TSSSS              
+                hhhhhi                                       TTTTT              
+                iiiiii                                                          
+                jjjjjj                                                          
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+ xxyywuurpmkjhedcba987655555557779cdeefgikooooqrsvxzAABCCCBBBBDFGHLLLLLLLNPSUWX 
+ wwwuttrrpmkjhedcba987654444446669bbbdfgiklnnoprstxyyyBBBBAAABDFGHJJJJJKLNOSUUU 
+ vussqqppolkjhedcba98765433333336999bdfghklmnoprrtuxxyAAAAzzzBDFGIIIIIJKLMOSSTU 
+ vusqppoonlkjhedcba98765432222236889bdfghjlmmopqrtuuxyyzzyyyzBDHIHHHHIJKLMOPRSU 
+ vusqooonmjjjhgfcba98765432111236789dffhhjklmnoqqstuwwwwwwxyzBDFFFGGHIJKLMOPRSU 
+ wvsqommllihhhgfcba9876543210124678cdfghiiklmnnnostttvvvvwxyBBDDDEFGHIJKLOOPRSV 
+ xvsqomlkjihgfedcba9876543211156679cccdggghklmmmoprrtuuuvwxzABCCDEFGHIJKLNOQRSV 
+ wvsromlkjihgfedcba9877774444457779abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLNOQRTV 
+ uusrpmlkjihgfedcba9888876666678999abcdefghijklmnopqrstuvwxyzABCDEGHIKKMNNOQSTV 
+ utsqpmlkjihgfedcba99998777777789aaabcdefghijklmnopqrstuvwxyzABCDEGIIKMMOPRSSVW 
+ ttrqpmlkjihgfedcccccc9999888aaaaaddddefghhijklnooprtttuvwxzzABCDEFHIKMNOPQTTVW 
+ tsrqpolkkkigffedddddccaaabbbbbbbbdeffffghiijkmnqrssuuuuvwxAAABDEEFHIKLMOPQTUVW 
+ tsrrpnllljigggfeeeeeedcbbbccddddeeefgggghijjlnpqssvwvvvvwxyBCCDEFFHKKLMOPQSUVW 
+ tsrqpnmmljihhgffffffeddddddeeeeeefgghhhijkllnnpqtuvwwwwwwxyBBCDEFGHLLLMOQRSUVX 
+ ttrqpnnnkjiiiigggggfeeeeefffhggfffjjkkjjjkmnppqqtuvwxxxxxyyABCDEFGHLMMNQQRSUVX 
+ vuuqpppnkjjjjihhhhgffffffghhhhggggjllkkkllmnqqrttvwwzzzzzzzABCDEFGHLMOQRRRSWWX 
+ vvvrrrqokkkkjjiiihgggggggiiiijiiiiklnnnnoooqqsstwwxzzABCBAAABCEFFHIKNORSSSSWYY 
+ ywvvuuqoommmmljjihhhhhhhhiljjjlllllmoooooqrrsstuwzzBBBBCBBBBBCEFHHIKNPRTTTTWXY 
+ ywwwwuqqqpponmlkiiijjiiiklmllllnnnnnoppppqttttuuwzBBCCCCCCDDDEEFHIIKNPSTVWWWXY 
+                                                                                
