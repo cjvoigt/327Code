@@ -101,6 +101,8 @@ void config_pc(dungeon_t *d)
   the_pc->color.push_back(COLOR_WHITE);
   the_pc->damage = &pc_dice;
   the_pc->name = "Isabella Garcia-Shapiro";
+  the_pc->defence = 1;
+  the_pc->dodge = 1;
 
   d->charmap[the_pc->position[dim_y]]
             [the_pc->position[dim_x]] = (character *) d->the_pc;
@@ -234,6 +236,36 @@ void pc::recalculate_speed()
   }
 }
 
+void pc::recalculate_defence() {
+    int i;
+
+    defence = 1;
+    for(i = 0; i < num_eq_slots; i++) {
+        if(eq[i]) {
+            defence = eq[i]->get_dodge();
+        }
+    }
+
+    if(defence <= 0) {
+        defence = 1;
+    }
+}
+
+void pc::recalculate_dodge() {
+    int i;
+
+    dodge = 1;
+    for(i = 0; i < num_eq_slots; i++) {
+        if(eq[i]) {
+            dodge = eq[i]->get_dodge();
+        }
+    }
+
+    if(dodge <= 0) {
+        dodge = 1;
+    }
+}
+
 uint32_t pc::wear_in(uint32_t slot)
 {
   object *tmp;
@@ -260,6 +292,8 @@ uint32_t pc::wear_in(uint32_t slot)
   io_queue_message("You wear %s.", eq[i]->get_name());
 
   recalculate_speed();
+  recalculate_defence();
+  recalculate_dodge();
 
   return 0;
 }
@@ -371,4 +405,27 @@ object *pc::from_pile(dungeon_t *d, pair_t pos)
   }
 
   return o;
+}
+
+void pc::do_ranged_attack(dungeon_t* d, character* c) {
+    uint32_t sum = 0;
+
+    for(int i = eq_slot_ranged; i < eq_slot_rring; i++) {
+        if(eq[i]) {
+            sum += eq[i]->roll_dice();
+        }
+    }
+
+    c->take_damage(d, this, sum);
+}
+
+void pc::do_poison_spell(dungeon_t* d, character* c) {
+    for(int i = c->position[dim_y] - 1; i <= c->position[dim_y] + 1; i++) {
+        for(int j = c->position[dim_x] - 1; j <= c->position[dim_x] + 1; j++) {
+            character* chr = d->charmap[i][j];
+
+            if(!chr) { continue; };
+            chr->take_damage(d, this, 100);
+        }
+    }
 }

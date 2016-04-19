@@ -27,6 +27,8 @@ class object {
   uint32_t get_color();
   const char *get_name();
   int32_t get_speed();
+  int32_t get_defence();
+  int32_t get_dodge();
   int32_t roll_dice();
   int32_t get_type();
   bool have_seen() { return seen; }

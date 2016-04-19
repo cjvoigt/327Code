@@ -17,36 +17,21 @@
 void do_combat(dungeon_t *d, character *atk, character *def)
 {
   uint32_t damage, i;
-  
+
   if (atk != d->the_pc) {
     damage = atk->damage->roll();
-    io_queue_message("The %s hits you for %d.", atk->name, damage);
+    def->take_damage(d, atk, damage);
   } else {
     for (i = damage = 0; i < num_eq_slots; i++) {
       if (i == eq_slot_weapon && !d->the_pc->eq[i]) {
         damage += atk->damage->roll();
       } else if (d->the_pc->eq[i]) {
-        damage += d->the_pc->eq[i]->roll_dice();
+        if(i != eq_slot_ranged) {
+            damage += d->the_pc->eq[i]->roll_dice();
+        }
       }
     }
-    io_queue_message("You hit the %s for %d.", def->name, damage);
-  }
-
-  if (damage >= def->hp) {
-    if (atk != d->the_pc) {
-      io_queue_message("You die.");
-      io_queue_message(""); /* Extra message to force pause on "more" prompt */
-    } else {
-      io_queue_message("The %s dies.", def->name);
-    }
-    def->hp = 0;
-    def->alive = 0;
-    if (def != d->the_pc) {
-      d->num_monsters--;
-    }
-    charpair(def->position) = NULL;
-  } else {
-    def->hp -= damage;
+    def->take_damage(d, atk, damage);
   }
 }
 

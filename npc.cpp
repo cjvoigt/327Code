@@ -558,6 +558,8 @@ npc::npc(dungeon_t *d, const monster_description &m)
   speed = m.speed.roll();
   hp = m.hitpoints.roll();
   damage = &m.damage;
+  defence = 10;
+  dodge = 15;
   next_turn = d->the_pc->next_turn;
   alive = 1;
   sequence_number = ++d->character_sequence_number;

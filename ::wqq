@@ -460,55 +460,34 @@ static const char *adjectives[] = {
   /* And there's one special case (see below) */
 };
 
-static uint32_t io_monster_index(uint32_t count, char c) {
-    if((c - 65) < count) {
-        return c - 65;
-    } else {
-        mvprintw(21, 19, "Not a valid Monster");
-        return -1;
-    }
-}
-
-static character* io_scroll_monster_list(char (*s)[40], uint32_t count, uint32_t flag, dungeon_t* d, character** c)
+static void io_scroll_monster_list(char (*s)[40], uint32_t count)
 {
   uint32_t offset;
   uint32_t i;
 
   offset = 0;
+
   while (1) {
-    if(count >= 13) {
-        for (i = 0; i < 13; i++) {
-            mvprintw(i + 6, 19, " %-40s ", s[i + offset]);
-        }
+    for (i = 0; i < 13; i++) {
+      mvprintw(i + 6, 19, " %-40s ", s[i + offset]);
     }
-    char a = getch();
-    switch (a) {
+    switch (getch()) {
+    case KEY_UP:
       if (offset) {
         offset--;
       }
       break;
+    case KEY_DOWN:
       if (offset < (count - 13)) {
         offset++;
       }
       break;
     case 27:
-      return NULL;
-    default:
-        if(a > 64 && a < 91) {
-            if(flag) {
-                int32_t i = io_monster_index(count, a);
-                if(i >= 0) {
-                    return c[i];
-                } else {
-                    return NULL;
-                }
-            }
-        }
-      break;
-      }
+      return;
     }
-    return NULL;
+
   }
+}
 
 static bool is_vowel(const char c)
 {
@@ -516,10 +495,9 @@ static bool is_vowel(const char c)
           c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
 }
 
-static character* io_list_monsters_display(dungeon_t *d,
+static void io_list_monsters_display(dungeon_t *d,
                                      character **c,
-                                     uint32_t count,
-                                     uint32_t flag)
+                                     uint32_t count,)
 {
   uint32_t i;
   char (*s)[40]; /* pointer to array of 40 char */
@@ -535,8 +513,7 @@ static character* io_list_monsters_display(dungeon_t *d,
   mvprintw(5, 19, " %-40s ", "");
 
   for (i = 0; i < count; i++) {
-    snprintf(s[i], 40, "%c. %3s%s (%c): %2d %s by %2d %s",
-             i + 65,
+    snprintf(s[i], 40, "%3s%s (%c): %2d %s by %2d %s",
              (is_vowel(character_get_name(c[i])[0]) ? "An " : "A "),
              character_get_name(c[i]),
              character_get_symbol(c[i]),
@@ -553,19 +530,19 @@ static character* io_list_monsters_display(dungeon_t *d,
     }
   }
 
-  mvprintw(19, 19, " %-40s ", "");
-  if(flag == 0) {
+  if (count <= 13) {
+    mvprintw(count + 6, 19, " %-40s ", "");
+    mvprintw(count + 7, 19, " %-40s ", "Hit escape to continue.");
+    while (getch() != 27 /* escape */)
+      ;
+  } else {
+    mvprintw(19, 19, " %-40s ", "");
     mvprintw(20, 19, " %-40s ",
              "Arrows to scroll, escape to continue.");
-  } else {
-    mvprintw(20, 19, "%-40s ", 
-             "Please choose a monster to continue. Arrow keys to scroll");
+    io_scroll_monster_list(s, count);
   }
-  character* chr =  io_scroll_monster_list(s, count, flag, d, c);
 
   free(s);
-
-  return chr;
 }
 
 static int compare_monster_distance(const void *v1, const void *v2)
@@ -577,7 +554,7 @@ static int compare_monster_distance(const void *v1, const void *v2)
           dungeon->pc_distance[character_get_y(*c2)][character_get_x(*c2)]);
 }
 
-static character* io_list_monsters(dungeon_t *d, int32_t flag)
+static void io_list_monsters(dungeon_t *d)
 {
   character **c;
   uint32_t x, y, count;
@@ -601,15 +578,13 @@ static character* io_list_monsters(dungeon_t *d, int32_t flag)
   qsort(c, count, sizeof (*c), compare_monster_distance);
 
   /* Display it */
-  character* result = io_list_monsters_display(d, c, count, flag);
+  io_list_monsters_display(d, c, count);
   free(c);
 
   unmask_alarm();
 
   /* And redraw the dungeon */
   io_display(d);
-
-  return result;
 }
 
 void io_object_to_string(object *o, char *s, uint32_t size)
@@ -903,23 +878,7 @@ void io_ranged_combat(dungeon_t* d) {
         return;
     }
 
-    character* result = io_list_monsters(d, 1);
-
-    if (result) {
-        ((pc*)(d->the_pc))->do_ranged_attack(d, result);
-    } else {
-        io_queue_message("The Attack Failed");
-    }
-}
-
-void io_poison_spell(dungeon_t* d) {
-    character* result = io_list_monsters(d, 1);
-
-    if (result) {
-        ((pc*)(d->the_pc))->do_poison_spell(d, result);
-    } else {
-        io_queue_message("The Attack Failed");
-    }
+    
 }
 
 void io_handle_input(dungeon_t *d)
@@ -1017,7 +976,7 @@ void io_handle_input(dungeon_t *d)
       fail_code = 0;
       break;
     case 'm':
-      io_list_monsters(d, 0);
+      io_list_monsters(d);
       fail_code = 1;
       break;
     case 'a':
@@ -1052,10 +1011,6 @@ void io_handle_input(dungeon_t *d)
        io_ranged_combat(d);
        fail_code = 0;
       break;
-    case 'p':
-       io_poison_spell(d);
-       fail_code = 0;
-       break;
     case 'q':
       /* Demonstrate use of the message queue.  You can use this for *
        * printf()-style debugging (though gdb is probably a better   *

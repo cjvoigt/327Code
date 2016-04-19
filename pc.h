@@ -46,6 +46,8 @@ extern const char *eq_slot_name[num_eq_slots];
 class pc : public character {
  private:
   void recalculate_speed();
+  void recalculate_defence();
+  void recalculate_dodge();
   uint32_t has_open_inventory_slot();
   int32_t get_first_open_inventory_slot();
   object *from_pile(dungeon_t *d, pair_t pos);
@@ -61,6 +63,8 @@ class pc : public character {
   uint32_t drop_in(dungeon_t *d, uint32_t slot);
   uint32_t destroy_in(uint32_t slot);
   uint32_t pick_up(dungeon_t *d);
+  void do_ranged_attack(dungeon_t* d, character* c);
+  void do_poison_spell(dungeon_t* d, character* c);
   pc();
   ~pc();
 };

@@ -5,6 +5,7 @@
 #include "npc.h"
 #include "pc.h"
 #include "dungeon.h"
+#include "io.h"
 
 void character_delete(void *c)
 {
@@ -132,6 +133,52 @@ uint32_t can_see(dungeon_t *d, pair_t voyeur, pair_t exhibitionist, int is_pc)
   }
 
   return 1;
+}
+
+bool character::is_dodged() {
+    int r = (rand() % 100) + 1;
+    if(r <= dodge){
+        return true;
+    }
+    return false;
+}
+
+void character::take_damage(dungeon_t* d, character* atk, uint32_t damage) {
+    if(is_dodged()) {
+        if(this == d->the_pc) {
+            io_queue_message("You dodged %s's attack.", atk->name);
+        } else {
+            io_queue_message("%s dodged your attack.", name);
+        }
+        return;
+    }
+
+    damage = (100.0 / (100 + defence)) * damage;
+
+    if(damage < hp) {
+        hp -= damage;
+        if(d->the_pc == this) {
+            if(atk == d->the_pc) {
+                io_queue_message("You hit yourself with %d of damage", damage);
+            } else {
+                io_queue_message("You were hit by %s for %d damage.", atk->name, damage);
+            }
+         } else if(d->the_pc != this) {
+            io_queue_message("You hit %s for %d damage.", name, damage);
+         }
+    } else {
+        hp = 0;
+        alive = 0;
+        if(d->the_pc != this) {
+            d->num_monsters--;
+        }
+        charpair(position) = NULL;
+        if(d->the_pc == this) {
+            io_queue_message("You Died!");
+        } else {
+            io_queue_message("%s was slain.", name);
+        }
+    }
 }
 
 int8_t *character_get_pos(const character *c)

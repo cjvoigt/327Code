@@ -85,6 +85,16 @@ int32_t object::get_speed()
   return speed;
 }
 
+int32_t object::get_defence()
+{
+  return defence;
+}
+
+int32_t object::get_dodge()
+{
+  return defence;
+}
+
 int32_t object::roll_dice()
 {
   return damage.roll();

@@ -11,6 +11,9 @@ typedef struct dungeon dungeon_t;
 class dice;
 
 class character {
+ private:
+  bool is_dodged();
+
  public:
   char symbol;
   pair_t position;
@@ -21,6 +24,8 @@ class character {
   int32_t hp;
   const dice *damage;
   const char *name;
+  int32_t defence;
+  int32_t dodge;
   /* The priority queue is not stable.  It's nice to have a record of *
    * how many monsters have been created, and this sequence number    *
    * serves that purpose, but more importantly, prioritizing lower    *
@@ -31,6 +36,8 @@ class character {
   uint32_t sequence_number;
   uint32_t get_color() { return color[rand_range(0, color.size() - 1)]; }
   char get_symbol() { return symbol; }
+  void take_damage(dungeon_t* d, character* atk, uint32_t damage);
+  virtual ~character(){};
 };
 
 int32_t compare_characters_by_next_turn(const void *character1,
@@ -48,6 +55,6 @@ int character_is_alive(const character *c);
 void character_next_turn(character *c);
 void character_reset_turn(character *c);
 char character_get_symbol(const character *c);
-const char *character_get_name(const character *c);  
+const char *character_get_name(const character *c);
 
 #endif
